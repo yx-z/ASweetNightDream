@@ -40,6 +40,7 @@
     var bottomTagReviseY     = String(parameters['BottomTagReviseY']     || '0');
     var topMessageReviseY    = String(parameters['TopMessageReviseY']    || '0');
     var bottomMessageReviseY = String(parameters['BottomMessageReviseY'] || '0');
+    var bubbleTagName        = 'BubbleTag';
     function Window_Message_Face() {
         this.initialize.apply(this, arguments);
     };
