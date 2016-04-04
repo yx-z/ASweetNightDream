@@ -12,6 +12,6 @@ var $plugins =
 {"name":"VIPArcher_Bubble_Message","status":true,"description":"VIPArcher_气泡对话框","parameters":{"BubbleTagName":"BubbleTag","TopMessageReviseY":"0","TopTagReviseY":"0","BottomMessageReviseY":"0","BottomTagReviseY":"0"}},
 {"name":"ChangeChoiceY","status":true,"description":"change the y axis of choiceBox","parameters":{"y":"240"}},
 {"name":"TWDP_TouchEventEx","status":true,"description":"v1.00 Extend the Touch Event","parameters":{}},
-{"name":"PreloadManager","status":true,"description":"1.1.1 Preload resources on scene/map load as well as game startup for a smoother gameplay experience.          id:TDDP_PreloadManager","parameters":{"Preload On Map Load":"true","Preload System Music":"false","Preload System SFX":"false","Print Debug to Console":"true"}},
+{"name":"PreloadManager","status":false,"description":"1.1.1 Preload resources on scene/map load as well as game startup for a smoother gameplay experience.          id:TDDP_PreloadManager","parameters":{"Preload On Map Load":"true","Preload System Music":"false","Preload System SFX":"false","Print Debug to Console":"true"}},
 {"name":"AudioCache","status":false,"description":"A cache for WebAudio which keeps preloaded objects in memory while they are still recent or in use. Combined with TDDP Preload Manager, this should hopefully reduce BGM play lag to a minimum.","parameters":{}}
 ];
