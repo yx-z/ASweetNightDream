@@ -40,6 +40,7 @@
     var bottomTagReviseY     = String(parameters['BottomTagReviseY']     || '0');
     var topMessageReviseY    = String(parameters['TopMessageReviseY']    || '0');
     var bottomMessageReviseY = String(parameters['BottomMessageReviseY'] || '0');
+    var bubbleTagName        = 'BubbleTag';
     function Window_Message_Face() {
         this.initialize.apply(this, arguments);
     };
@@ -149,7 +150,7 @@
     Scene_Map.prototype.createMessageWindow = function() {
         _createMessageWindowBubbleTag.call(this);
         var bubbleTag = new Sprite();
-        bubbleTag.bitmap = ImageManager.loadSystem('BubbleTag');
+        bubbleTag.bitmap = ImageManager.loadSystem(bubbleTagName);
         this._messageWindow._messageBubbleTag = bubbleTag;
         this.addChild(bubbleTag);
         this._messageWindow._messageBubbleTag.visible = false;
