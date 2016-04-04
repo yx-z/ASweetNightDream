@@ -40,7 +40,6 @@
     var bottomTagReviseY     = String(parameters['BottomTagReviseY']     || '0');
     var topMessageReviseY    = String(parameters['TopMessageReviseY']    || '0');
     var bottomMessageReviseY = String(parameters['BottomMessageReviseY'] || '0');
-    var bubbleTagName        =  'BubbleTag';
     function Window_Message_Face() {
         this.initialize.apply(this, arguments);
     };
@@ -62,13 +61,14 @@
         return 170;
     };
     Window_Message_Face.prototype.updateLoading = function() {
-        if (this._faceBitmap) {
-            if (ImageManager.isReady()) {
-                this.drawMessageFace();
-                this._faceBitmap = null;
-                return false;
-            } else { return true; };
-        } else { return false; };
+        if (!this._faceBitmap) return false;
+
+        if (ImageManager.isReady()) {
+            this.drawMessageFace();
+            this._faceBitmap = null;
+            return false;
+        }
+        return true;
     };
     Window_Message_Face.prototype.loadMessageFace = function() {
         this._faceBitmap = ImageManager.loadFace($gameMessage.faceName());
@@ -79,7 +79,7 @@
     Window_Message_Face.prototype.update = function() {
         Window_Base.prototype.update.call(this);
         this.updateLoading();
-        if (this.contentsOpacity < 255) {this.contentsOpacity += 15};
+        if (this.contentsOpacity < 255) this.contentsOpacity += 15;
         if (this.move_x >= 0) {
             this.x += 4;
             this.move_x -= 4;
@@ -92,7 +92,9 @@
             this.setPosition();
             this.show();
             this.open();
-        } else { this.hide(); };
+        } else {
+            this.hide();
+        }
     };
     Window_Message_Face.prototype.setPosition = function() {
         this.y = this._messageWindow.height - this.windowHeight();
