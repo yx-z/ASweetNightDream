@@ -1,0 +1,12 @@
+/* @author: Yx-Z
+ * @plugindesc: Create a new CAR vehicle
+ *
+ */
+Game_Map.prototype.createVehicles = function() {
+    this._vehicles = [];
+    this._vehicles[0] = new Game_Vehicle('boat');
+    this._vehicles[1] = new Game_Vehicle('ship');
+    this._vehicles[2] = new Game_Vehicle('airship');
+    this._vehicles[3] = new Game_Vehicle('car');
+};
+
