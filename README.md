@@ -13,4 +13,4 @@ Also, I have set some save points so don't worry if 10 min still sounds too long
 
 ![](https://github.com/yx-z/sweetdream/blob/master/pic/1.png?raw=true)
 
-![[(https://github.com/yx-z/sweetdream/blob/master/pic/2.png?raw=true)
+![](https://github.com/yx-z/sweetdream/blob/master/pic/2.png?raw=true)
